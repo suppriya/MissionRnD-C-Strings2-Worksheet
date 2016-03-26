@@ -18,7 +18,7 @@ original String
 #include <stdlib.h>
 
 char * get_sub_string(char *str, int i, int j){
-	if ((str != NULL) && (str != " "))
+	if ((str != NULL) && (str != " ") && (i<=j))
 	{
 		int k;
 		char* ans = (char*)malloc(sizeof(char*)*(j - i + 1));
@@ -26,8 +26,9 @@ char * get_sub_string(char *str, int i, int j){
 		{
 			ans[k - i] = str[k];
 		}
-		ans[k] = '\0';
+		ans[k - i] = '\0';
+
 		return ans;
 	}
-	return NULL;
+	else return NULL;
 }

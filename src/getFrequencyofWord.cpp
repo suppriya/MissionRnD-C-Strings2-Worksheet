@@ -17,6 +17,7 @@ int count_word_in_str_way_1(char *str, char *word){
 }
 
 int count_word_int_str_way_2_recursion(char *str, char *word){
+	
 	return 0;
 }
 
